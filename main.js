@@ -152,6 +152,7 @@
 
                         else if (action === "copy") {
                             navigator.clipboard.writeText(link.url); // copy to link to clipboard
+                            alert("[CodeHS+]: Link copied to clipboard!");
                         }
                     });
                 });
@@ -166,7 +167,7 @@
             const name = document.getElementById("linkName").value.trim();
             const url = document.getElementById("linkURL").value.trim();
             if (!name || !url) {
-                alert("Both name and URL are required.");
+                alert("[CodeHS+]: Both name and URL are required.");
             } 
             
             else {
