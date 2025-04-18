@@ -1,5 +1,5 @@
 <h1>CodeHS Plus</h1>
-<h3>Adds general utility and quality of life to CodeHS. Currently the only feature is saving sandbox links to collaborate on CodeHS easier.</h3>
+<h3>Adds general utility and quality of life to CodeHS. Currently the only features are saving sandbox links to collaborate on CodeHS easier, and copying assignment solution code to clipboard.</h3>
 
 <h1>Installation</h1>
 <ul>
@@ -33,4 +33,6 @@
 <ul>
   <li>Navigate to https://codehs.com/sandbox</li>
   <li>Create, rename, delete, or copy link for sandboxes you save.</li>
+  <li>When doing an assignment, you should see a new button next to the CodeHS logo on the top right.</li>
+  <li>It is called "Cheat Menu". Clicking on it will allow you to copy any assignments answer code to your clipboard.</li>
 </ul>
