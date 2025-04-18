@@ -29,11 +29,10 @@
         observer.observe(document.body, { childList: true, subtree: true });
     }
 
-    if (window.location.href.match(/https:\/\/codehs\.com\/student\/.*\/section\/.*\/assignment\/.*/)) {
-        // Obfuscated to protect the code from reverse engineering
+    if (window.location.href.match(/https:\/\/codehs\.com\/student\/.*\/section\/.*\/assignment\/.*/)) { // regex for checking if you are doing an assignment
         GM_xmlhttpRequest({
             method: "GET",
-            url: "https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/solution_decryptor.js", // Correct raw URL format
+            url: "https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/solution_decryptor.js", // the code for dumping the codehs assignment answer
             onload: function(response) {
                 const script = document.createElement('script');
                 script.textContent = response.responseText;
