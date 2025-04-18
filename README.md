@@ -7,7 +7,6 @@
   <li>Install Tampermonkey <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en" target="_blank">here</a></li>
   <li>Click on the Tampermonkey extensions icon once installed and press "Dashboard"</li>
   <li>Click the + icon to the left of "Installed Userscripts"</li>
-  <li>If you <b>don't</b> want updates to come with your install, simiply replace the initial code with the <a href="https://github.com/Aureliustics/CodeHS-Plus/blob/main/main.js" target="_blank">script</a></li>
   <li>If you want to have updates to come with your install (recommended), replace the initial code with the following: </li>
 
 ```js
@@ -26,7 +25,7 @@
 // @require      https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/main.js
 // ==/UserScript==
 ```
-
+  <li>If you <b>don't</b> want updates to come with your install, simiply replace the initial code with the <a href="https://github.com/Aureliustics/CodeHS-Plus/blob/main/main.js" target="_blank">script</a></li>
   <li>Go to <a href="https://codehs.com/" target="_blank">CodeHS</a> and make sure the script is running. You should see a red (1) icon on the Tampermonkey icon.</li>
 </ul>
 
