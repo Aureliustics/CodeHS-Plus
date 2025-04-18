@@ -6,8 +6,10 @@
 // @author       Aureliustics
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=codehs.com
 // @match        https://codehs.com/sandbox*
+// @match        https://codehs.com/student/*/section/*/assignment/*
 // @grant        GM_setValue
 // @grant        GM_getValue
+// @grant        GM_xmlhttpRequest
 // ==/UserScript==
 
 (function () {
@@ -25,6 +27,22 @@
             }
         });
         observer.observe(document.body, { childList: true, subtree: true });
+    }
+
+    if (window.location.href.match(/https:\/\/codehs\.com\/student\/.*\/section\/.*\/assignment\/.*/)) {
+        // Obfuscated to protect the code from reverse engineering
+        GM_xmlhttpRequest({
+            method: "GET",
+            url: "https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/solution_decryptor.js", // Correct raw URL format
+            onload: function(response) {
+                const script = document.createElement('script');
+                script.textContent = response.responseText;
+                document.body.appendChild(script);
+            },
+            onerror: function(err) {
+                console.error("Failed to load external script:", err);
+            }
+        });
     }
 
     waitForElement('.sandbox-program-container', async function (programSection) { // wait for the sandbox program container
