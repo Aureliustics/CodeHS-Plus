@@ -36,3 +36,29 @@
   <li>When doing an assignment, you should see a new button next to the CodeHS logo on the top left.</li>
   <li>It is called "Cheat Menu". Clicking on it will allow you to copy any assignments answer code to your clipboard.</li>
 </ul>
+<h1>Disclaimer</h1>
+<b>I am not responsible if you get caught using the cheat option aswell as any damages that may occur during usage. CodeHS has anticheating measures in place, and I cannot promise that the cheat is undetected.</b>
+<li>Below is a dumped result of CodeHS's anticheat flags so you can understand how to circumvent it:</li>
+
+```js
+CheatFlagType: {
+                CHEAT_TOOL_DETECTED: 6,
+                CHOICES: [[0, "None"], [1, "Not Enough Time Spent"], [2, "Insufficent History"], [3, "Copy and Pasted"], [4, "Similarity to Solution"], [5, "Similarity to Student"], [6, "Cheat Tool Detected"]],
+                COPY_AND_PASTED: 3,
+                INSUFFICENT_HISTORY: 2,
+                NONE: 0,
+                NOT_ENOUGH_TIME_SPENT: 1,
+                SIMILARITY_TO_SOLUTION: 4,
+                SIMILARITY_TO_STUDENT: 5,
+                STRINGS: {
+                    0: "None",
+                    1: "Not Enough Time Spent",
+                    2: "Insufficent History",
+                    3: "Copy and Pasted",
+                    4: "Similarity to Solution",
+                    5: "Similarity to Student",
+                    6: "Cheat Tool Detected"
+                }
+            }
+```
+<li>Make sure you aren't just copy pasting the answer into your IDE. Instead manually type out the answer with different variable names, function names, and running the code frequently to have code history. I might implement some anticheat bypasses in the future but for now, stay vigilant when using the cheat.</li>
