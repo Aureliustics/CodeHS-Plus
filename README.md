@@ -1,5 +1,5 @@
 <h1>CodeHS Plus</h1>
-<h3>Adds general utility and quality of life to CodeHS. Currently the only features are saving sandbox links to collaborate on CodeHS easier, and copying assignment solution code to clipboard.</h3>
+<h3>Adds general utility and quality of life to CodeHS. Currently the only features are saving sandbox links to collaborate on CodeHS easier, showing assignment answers in a codeblock or printing it to console. For the cheat menu, stealthy features are set in place such as a self destruct button (press left alt to activate) to destroy cheat menu and codeblock. This makes it harder to get caught by teachers.</h3>
 
 <h1>Installation</h1>
 <ul>
@@ -34,7 +34,12 @@
   <li>Navigate to https://codehs.com/sandbox</li>
   <li>Create, rename, delete, or copy link for sandboxes you save.</li>
   <li>When doing an assignment, you should see a new button next to the CodeHS logo on the top left.</li>
-  <li>It is called "Cheat Menu". Clicking on it will allow you to copy any assignments answer code to your clipboard.</li>
+  <li>It is called "Cheat Menu". Clicking on it will show you the features.</li>
+</ul>
+<h1>Known Bugs</h1>
+<ul>
+  <li>If either the Cheat menu or saved links UI is not showing up, refresh the page. This usually happens because Tampermonkey doesn't reinject upon subdomain changes.</li>
+  <li>Running print answer to console whilst the dev console is open, will pause you in debugger. I know it's stupid, just a side effect from obfuscation. Print to console before opening the console.</li>
 </ul>
 <h1>Disclaimer</h1>
 <b>I am not responsible if you get caught using the cheat option aswell as any damages that may occur during usage. CodeHS has anticheating measures in place, and I cannot promise that the cheat is undetected.</b>
