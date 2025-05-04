@@ -42,6 +42,35 @@
                 console.error("Failed to load external script:", err);
             }
         });
+    } else if (window.location.href.match(/^https:\/\/codehs\.com\/sandbox\/id\/.*$/)) { // regex to check if you are in a sandbox
+        let timeSpent = GM_getValue('timeSpent', 0);
+
+        // concat time
+        function formatTime(seconds) {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secondsLeft = seconds % 60;
+
+            return `${hours}h ${minutes}m ${secondsLeft}s`;
+        }
+
+        // display time spent
+        function updateTimeDisplay() {
+            const fileTabBar = document.querySelector('#file-tab-bar');
+            if (fileTabBar) {
+                fileTabBar.innerHTML = `Time Wasted: ${formatTime(timeSpent)}`;
+                fileTabBar.style.paddingLeft = "5px";
+            }
+        }
+
+        // 1000ms so it updates every second
+        setInterval(() => {
+            timeSpent++;  // increase by 1s
+            GM_setValue('timeSpent', timeSpent);  // store into gm variable
+            updateTimeDisplay();
+        }, 1000);
+
+        updateTimeDisplay();
     }
 
     waitForElement('.sandbox-program-container', async function (programSection) { // wait for the sandbox program container
