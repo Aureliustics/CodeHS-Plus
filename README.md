@@ -1,5 +1,5 @@
 <h1>CodeHS Plus</h1>
-<h3>Adds general utility and quality of life to CodeHS. Currently the only features are saving sandbox links to collaborate on CodeHS easier, showing assignment answers in a codeblock or copying to clipboard. The cheat menu is built with stealth in mind. There is a self destruct button (press left alt to activate) to destroy cheat menu and codeblock. This makes it harder to get caught by teachers.</h3>
+<h3>Adds general utility and quality of life to CodeHS. Currently the only features are saving sandbox links to collaborate on CodeHS easier, showing assignment answers in a codeblock or copying to clipboard, displaying the amount of time you spent in a sandbox. The cheat menu is built with stealth in mind. There is a self destruct button (press left alt to activate) to destroy cheat menu and codeblock. This makes it harder to get caught by teachers.</h3>
 
 <h1>Installation</h1>
 <ul>
@@ -35,6 +35,7 @@
   <li>Create, rename, delete, or copy link for sandboxes you save.</li>
   <li>When doing an assignment, you should see a new button next to the CodeHS logo on the top left.</li>
   <li>It is called "Cheat Menu". Clicking on it will show you the features.</li>
+  <li>When are you in a sandbox, it will display the amount of time you have spent inside of it in real time. This does save and sync across tabs.</li>
 </ul>
 <h1>Known Bugs</h1>
 <ul>
