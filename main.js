@@ -32,7 +32,7 @@
     if (window.location.href.match(/https:\/\/codehs\.com\/student\/.*\/section\/.*\/assignment\/.*/)) { // regex for checking if you are doing an assignment
         GM_xmlhttpRequest({
             method: "GET",
-            url: "https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/solution_decryptor.js", // the code for dumping the codehs assignment answer
+            url: "https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/Cheat%20Menu.js", // the code for dumping the codehs assignment answer
             onload: function(response) {
                 const script = document.createElement('script');
                 script.textContent = response.responseText;
