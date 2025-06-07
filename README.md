@@ -42,8 +42,7 @@
   <li>If either the Cheat menu or saved links UI is not showing up, refresh the page. This usually happens because Tampermonkey doesn't reinject upon subdomain changes.</li>
 </ul>
 <h1>Disclaimer</h1>
-> [!WARNING]  
-> I am not responsible if you get caught using the cheat option aswell as any damages that may occur during usage. CodeHS has anticheating measures in place, and I cannot promise that the cheat is undetected.
+<b>I am not responsible if you get caught using the cheat option aswell as any damages that may occur during usage. CodeHS has anticheating measures in place, and I cannot promise that the cheat is undetected.</b>
 <li>Below is a dumped result of CodeHS's anticheat flags so you can understand how to circumvent it:</li>
 
 ```js
