@@ -158,7 +158,7 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
         <button class="button" id="resetBtn">Reset to Default</button>
       </div>
 
-      <p>- To self destruct cheat menu, click left alt on your keyboard.</p>
+      <p>- To self destruct cheat menu, middle click with your mouse.</p>
       <p>- Automation has not yet been implemented. It will be added soon.</p>
     `;
     document.body.appendChild(gui);
@@ -470,15 +470,15 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
       const currentUrl = window.location.href;
       const parsed = currentUrl.split('/');
       const userID = parsed[4]; // index 4 is where the user ID appears in the URL
-      if (db.includes(userID) || db.length === 0) {
+      if (db.includes(userID) || db.length === 0) { // checks if the current userid is valid in the db
         return [true, userID];
       } else {
         return [false, userID];
       }
     }
 
-    function checkKillswitch(url, choice) { // not super necessary anymore because I open sourced the cheat menu
-      fetch(url, { method: "GET" })
+    function checkKillswitch(url, choice) { // not super necessary anymore because I open sourced the cheat menu.
+      fetch(url, { method: "GET" }) // checks if the cheat menu file on my github repo is still valid, if it is then dump the solution
         .then(response => {
           if (!response.ok) return;
 
@@ -507,7 +507,7 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
     };
 
     document.getElementById('destroyBtn').onclick = () => {
-        checkKillswitch("https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/Cheat%20Menu.js", 3); // 2 for copy
+        checkKillswitch("https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/Cheat%20Menu.js", 3); // 3 for destroying codeblocks
     };
 
     let navBar = document.getElementsByClassName("collapse navbar-collapse");
@@ -566,11 +566,12 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
       }
     }
 
-    document.onkeydown = function(e) {
+    document.onmousedown = function(e) {
+        e.preventDefault(); // prevent autoscroll
         e = e || window.event;
         var key = e.which || e.keyCode;
     
-        if (key == 18) { // left alt key
+        if (e.button === 1) { // middle click
             // destroy the cheat menu button
             const cheatBtn = document.getElementById("codehs-cheat-btn");
             if (cheatBtn) {
@@ -705,5 +706,3 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
         })
     }
 })();
-  
-  
