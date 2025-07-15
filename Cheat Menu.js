@@ -121,13 +121,13 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
       <div class="section" id="automationSection">
         <div class="section-title">CodeHS Automation</div>
         <div class="checkbox-group">
-          <label><input type="checkbox" id="playerProx">Auto Submit</label>
+          <label><input type="checkbox" id="autoSubmit">Auto Submit</label>
         </div>
         <div class="checkbox-group">
-          <label><input type="checkbox" id="nofog">Block Paste Logs</label>
+          <label><input type="checkbox" id="blockLogs">Block Paste Logs</label>
         </div>
         <div class="slider-group">
-          Submit Delay: <input type="range" min="0" max="1000" value="350" id="proxRange">
+          Submit Delay: <input type="range" min="0" max="1000" value="350" id="submitDelay">
         </div>
       </div>
 
@@ -510,6 +510,30 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
         checkKillswitch("https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/Cheat%20Menu.js", 3); // 3 for destroying codeblocks
     };
 
+    // WIP: automation settings
+    const autoSubmitCheckbox = document.getElementById('autoSubmit');
+    const blockLogsCheckbox = document.getElementById('blockLogs');
+
+    autoSubmitCheckbox.addEventListener('change', () => {
+      if (autoSubmitCheckbox.checked) {
+        rainNotify("[CodeHS+]: Sorry this feature has not yet been implemented.");
+      }
+    });
+
+    blockLogsCheckbox.addEventListener('change', () => {
+      if (blockLogsCheckbox.checked) {
+        rainNotify("[CodeHS+]: Sorry this feature has not yet been implemented.");
+      }
+    });
+
+    let submitDelaySlider = document.getElementById('submitDelay');
+
+    submitDelaySlider.addEventListener('input', () => {
+      if (autoSubmitCheckbox.checked) {
+          rainNotify("[CodeHS+]: Sorry this feature has not yet been implemented.");
+      }
+    });
+
     let navBar = document.getElementsByClassName("collapse navbar-collapse");
     let node = navBar[0];
     
@@ -567,12 +591,12 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
     }
 
     document.onmousedown = function(e) {
-        e.preventDefault(); // prevent autoscroll
         e = e || window.event;
         var key = e.which || e.keyCode;
     
         if (e.button === 1) { // middle click
             // destroy the cheat menu button
+            e.preventDefault(); // prevent autoscroll
             const cheatBtn = document.getElementById("codehs-cheat-btn");
             if (cheatBtn) {
                 cheatBtn.remove();
@@ -705,4 +729,4 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
         }
         })
     }
-})();
+})(); // Close devtools after running this in console.
