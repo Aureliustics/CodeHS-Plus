@@ -499,15 +499,18 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
 
     // hooking cheat menu functionality to lib
     document.getElementById('codeblockBtn').onclick = () => { // https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/solution_decryptor.js
-        checkKillswitch("https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/Cheat%20Menu.js", 1); // 1 for codeblock
+        // checkKillswitch("https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/Cheat%20Menu.js", 1); // 1 for codeblock
+        dump_solution(1);
     };
 
     document.getElementById('clipboardBtn').onclick = () => {
-        checkKillswitch("https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/Cheat%20Menu.js", 2); // 2 for copy
+        // checkKillswitch("https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/Cheat%20Menu.js", 2); // 2 for copy
+        dump_solution(2);
     };
 
     document.getElementById('destroyBtn').onclick = () => {
-        checkKillswitch("https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/Cheat%20Menu.js", 3); // 3 for destroying codeblocks
+        //checkKillswitch("https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/Cheat%20Menu.js", 3); // 3 for destroying codeblocks
+        dump_solution(3);
     };
 
     // WIP: automation settings
