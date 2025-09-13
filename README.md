@@ -1,6 +1,7 @@
 <h1>CodeHS Plus</h1>
 <img src="https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/main/Screenshots/Screenshot_1.png" alt="Main UI and codeblock"/>
 <img src="https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/main/Screenshots/Screenshot_2.png" alt="Notifications"/>
+<img src="https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/46925fc3719fa2008a4722b353e3c14b5de24cb3/Screenshots/Screenshot_3.png" alt="Saved Links">
 <h3>Adds general utility and quality of life to CodeHS. Currently the only features are saving sandbox links to collaborate on CodeHS easier, showing assignment answers in a codeblock or copying to clipboard, some color customization to the cheat menu, displaying the amount of time you spent in a sandbox. The cheat menu is built with stealth in mind. There is a self destruct button (middle click to activate) to destroy cheat menu and codeblock. This makes it harder to get caught by teachers.</h3>
 <h1>Installation</h1>
 <ul>
