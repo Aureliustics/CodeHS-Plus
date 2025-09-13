@@ -4,8 +4,22 @@
 <h3>Adds general utility and quality of life to CodeHS. Currently the only features are saving sandbox links to collaborate on CodeHS easier, showing assignment answers in a codeblock or copying to clipboard, displaying the amount of time you spent in a sandbox. The cheat menu is built with stealth in mind. There is a self destruct button (middle click to activate) to destroy cheat menu and codeblock. This makes it harder to get caught by teachers.</h3>
 <h1>Installation</h1>
 <ul>
-  <li>To run this script, you need to install Tampermonkey</li>
+  <h3>
+    Method 1: Lazy
+  </h3>
+  <li>If you just want to cheat on your assignments without installing anything:</li>
+  <li>Copy the cheat menu script <a href="https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/Cheat%20Menu.js" target="_blank">here</a>, control + A then control + C on your keyboard</li>
+  <li>Go to your CodeHS assignment and right click, click inspect then navigate to the "Console" at the top of inspect element</li>
+  <li>Type "allow pasting" into the console then press enter</li>
+  <li>Control + V to paste the cheat menu script then enter and you should have the cheat</li>
+  <li>The only caveat with this installion method is you have to keep pasting the script into the code, so its better to do method 2.</li>
+</ul>
+<ul>
+  <h2>
+    Method 2: Proper
+  </h2>
   <li>Install Tampermonkey <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en" target="_blank">here</a></li>
+  <li>Make sure you enabled developer mode in chrome extensions, and gave UserScript access to Tampermonkey (right click icon -> "Manage extension")</li>
   <li>Click on the Tampermonkey extensions icon once installed and press "Dashboard"</li>
   <li>Click the + icon to the left of "Installed Userscripts"</li>
   <li>If you want to have updates to come with your install (recommended), replace the initial code with the following: </li>
@@ -26,7 +40,7 @@
 // @require      https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/main.js
 // ==/UserScript==
 ```
-  <li>If you <b>don't</b> want updates to come with your install, simiply replace the initial code with the <a href="https://github.com/Aureliustics/CodeHS-Plus/blob/main/main.js" target="_blank">script</a></li>
+  <li>If you <b>don't</b> want updates to come with your install, simiply paste this <a href="https://github.com/Aureliustics/CodeHS-Plus/blob/main/main.js" target="_blank">script</a> into tampermonkey instead.</li>
   <li>Go to <a href="https://codehs.com/" target="_blank">CodeHS</a> and make sure the script is running. You should see a red (1) icon on the Tampermonkey icon.</li>
 </ul>
 
