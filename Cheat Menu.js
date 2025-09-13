@@ -26,7 +26,7 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
           height: 0;
         }
 
-        .project-rain-header {
+        .project-rain-gui .project-rain-header {
         cursor: move;
         font-size: 16px;
         font-weight: bold;
@@ -34,60 +34,60 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
         margin-bottom: 10px;
         }
 
-        .tab-bar {
+        .project-rain-gui .tab-bar {
         display: flex;
         margin-bottom: 10px;
         gap: 10px;
         }
 
-        .tab-bar div {
+        .project-rain-gui .tab-bar div {
         padding: 2px 6px;
         background-color: #141421;
         border: 1px solid #00bfff;
         cursor: pointer;
         }
 
-        .tab-bar div.active {
+        .project-rain-gui .tab-bar div.active {
         background-color: #0e0e1a;
         }
 
-        .section {
+        .project-rain-gui .section {
         margin-bottom: 20px;
         padding: 10px 0;
         border-bottom: 2px solid rgb(34, 34, 34);
         }
 
-        .section:last-child {
+        .project-rain-gui .section:last-child {
         border-bottom: none;
         }
 
-        .section-title {
+        .project-rain-gui .section-title {
         color: white;
         margin: 5px 0;
         }
 
-        .checkbox-group,
-        .slider-group {
+        .project-rain-gui .checkbox-group,
+        .project-rain-gui .slider-group {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
         }
 
-        label {
+        .project-rain-gui label {
         display: flex;
         align-items: center;
         gap: 4px;
         }
 
-        input[type="checkbox"] {
+        .project-rain-gui input[type="checkbox"] {
         accent-color: #00bfff;
         }
 
-        input[type="range"] {
+        .project-rain-gui input[type="range"] {
         width: 200px;
         }
 
-        .button {
+        .project-rain-gui .button {
         background: #141421;
         color: #00bfff;
         border: 1px solid #00bfff;
@@ -96,8 +96,8 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
         cursor: pointer;
         }
 
-        input[type="text"],
-        select {
+        .project-rain-gui input[type="text"],
+        .project-rain-gui select {
         background: #141421;
         color: #00bfff;
         border: 1px solid #00bfff;
@@ -148,6 +148,12 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
         </div>
         <div class="checkbox-group">
           <label>Button Background Color: <input type="color" id="buttonBgColor" value="#141421"></label>
+        </div>
+        <div class="checkbox-group">
+          <label>Header Text Color: <input type="color" id="headerTextColor" value="#ffffff"></label>
+        </div>
+        <div class="checkbox-group">
+          <label>Section Title Color: <input type="color" id="sectionTitleColor" value="#ffffff"></label>
         </div>
         <div class="checkbox-group">
           <label><input type="checkbox" id="rainbowToggle"> Enable Rainbow Accent</label>
@@ -293,7 +299,11 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
     const mainColorInput = document.getElementById('mainColor');
     const accentColorInput = document.getElementById('accentColor');
     const buttonBgColorInput = document.getElementById('buttonBgColor');
-
+    const headerTextColorInput = document.getElementById('headerTextColor');
+    const sectionTitleColorInput = document.getElementById('sectionTitleColor');
+    const header = document.getElementById('drag-header');
+    const sectionTitles = document.querySelectorAll('.section-title');
+    
     mainColorInput.addEventListener('input', (e) => {
       document.querySelector('.project-rain-gui').style.backgroundColor = e.target.value;
     });
@@ -301,7 +311,7 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
     accentColorInput.addEventListener('input', (e) => {
         // sync color changes
         const accentColor = e.target.value;
-        document.querySelectorAll('.project-rain-gui, .tab-bar div, .button, input[type="text"], select').forEach(element => {
+        document.querySelectorAll('.project-rain-gui, .project-rain-gui .tab-bar div, .project-rain-gui .button, .project-rain-gui input[type="text"], .project-rain-gui select').forEach(element => {
             element.style.borderColor = accentColor;
             element.style.color = accentColor;
         });
@@ -313,12 +323,26 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
     });
 
     buttonBgColorInput.addEventListener('input', (e) => {
-      document.querySelectorAll('.button, .tab-bar div').forEach(button => {
+      document.querySelectorAll('.project-rain-gui .button, .project-rain-gui .tab-bar div').forEach(button => {
         button.style.backgroundColor = e.target.value;
       });
     });
 
+    headerTextColorInput.addEventListener('input', (e) => {
+      header.style.color = e.target.value;
+    });
 
+    sectionTitleColorInput.addEventListener('input', (e) => {
+      sectionTitles.forEach(title => {
+        title.style.color = e.target.value;
+      });
+    });
+
+    // init colors on load
+    header.style.color = headerTextColorInput.value;
+    sectionTitles.forEach(title => {
+      title.style.color = sectionTitleColorInput.value;
+    });
 
     const rainbowToggle = document.getElementById('rainbowToggle');
     const rainbowSpeedInput = document.getElementById('rainbowSpeed');
@@ -346,7 +370,7 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
             const rgb = `rgb(${r}, ${g}, ${b})`;
     
             // update other elements colors
-            document.querySelectorAll('.project-rain-gui, .tab-bar div, .button, input[type="text"], select').forEach(element => {
+            document.querySelectorAll('.project-rain-gui, .project-rain-gui .tab-bar div, .project-rain-gui .button, .project-rain-gui input[type="text"], .project-rain-gui select').forEach(element => {
                 element.style.borderColor = rgb;
                 element.style.color = rgb;
             });
@@ -364,7 +388,7 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
         } else {
             clearInterval(rainbowInterval);
             const defaultAccentColor = "#00bfff"; // default accent color
-            document.querySelectorAll('.project-rain-gui, .tab-bar div, .button, input[type="text"], select').forEach(element => {
+            document.querySelectorAll('.project-rain-gui, .project-rain-gui .tab-bar div, .project-rain-gui .button, .project-rain-gui input[type="text"], .project-rain-gui select').forEach(element => {
                 element.style.borderColor = defaultAccentColor;
                 element.style.color = defaultAccentColor;
             });
@@ -380,6 +404,7 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
     document.getElementById('resetBtn').onclick = () => {
         mainColorInput.value = "#0e0e1a";
         accentColorInput.value = "#00bfff";
+        accentColorInput.dispatchEvent(new Event('input')); // fix accent color not updating by triggering the input event
         buttonBgColorInput.value = "#141421";
       
         // reset rainbow effect
@@ -389,10 +414,10 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
       
         // reset the background and border colors of everything
         document.querySelector('.project-rain-gui').style.backgroundColor = "#0e0e1a";
-        document.querySelectorAll('.project-rain-gui, .tab-bar div, .button, input[type="text"], select').forEach(element => {
+        document.querySelectorAll('.project-rain-gui .tab-bar div, .project-rain-gui .button, .project-rain-gui input[type="text"], .project-rain-gui select').forEach(element => {
           element.style.borderColor = "#00bfff";
           element.style.color = "#00bfff";
-          if (element.classList.contains('button') || element.classList.contains('tab-bar')) {
+          if (element.classList.contains('button') || element.parentElement?.classList.contains('tab-bar')) {
             element.style.backgroundColor = "#141421"; // reset button background color
           }
         });
@@ -414,7 +439,7 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
         document.getElementById("uiSettingsTab").style.backgroundColor = "#141421";
         document.getElementById("showAllTab").style.backgroundColor = "#141421";
 
-        rainNotify("[CodeHS+]: Resetted settings and menu colors to default.");
+        rainNotify("[CodeHS+]: Reset settings and menu colors to default.");
     };
 
     // tab button click logic
