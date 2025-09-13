@@ -1,7 +1,5 @@
 <h1>CodeHS Plus</h1>
 <h3>Adds general utility and quality of life to CodeHS. Currently the only features are saving sandbox links to collaborate on CodeHS easier, showing assignment answers in a codeblock or copying to clipboard, displaying the amount of time you spent in a sandbox. The cheat menu is built with stealth in mind. There is a self destruct button (middle click to activate) to destroy cheat menu and codeblock. This makes it harder to get caught by teachers.</h3>
-![Screenshot 1](https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/main/Screenshots/Screenshot_1.png)
-![Screenshot 2](https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/main/Screenshots/Screenshot_2.png)
 <h1>Installation</h1>
 <ul>
   <li>To run this script, you need to install Tampermonkey</li>
@@ -69,3 +67,5 @@ CheatFlagType: {
 ```
 <li>Make sure you aren't just copy pasting the answer into your IDE. Instead manually type out the answer with different variable names, function names, and running the code frequently to have code history. I might implement some anticheat bypasses in the future but for now, stay vigilant when using the cheat.</li>
 <li>If you are trying to get answers to a quiz, the cheat menu will currently not do that for you. If you want CodeHS quiz answers refer to these repositories: <a href="https://github.com/aditeyapatakoti/CodeHS-IntroIntoPython/tree/main" target="_blank">python</a> <a href="https://github.com/aditeyapatakoti/CodeHS-IntroIntoJavascript" target="_blank">javascript</a>.</li>
+
+![Screenshot 1](https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/main/Screenshots/Screenshot_1.png)
