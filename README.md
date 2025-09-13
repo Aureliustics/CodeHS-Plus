@@ -18,6 +18,7 @@
   <h3>
     Method 2: Proper
   </h3>
+  <li>You need the Tampermonkey extension for the cheat menu and misc CodeHS+ features to load automatically.</li>
   <li>Install Tampermonkey <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en" target="_blank">here</a></li>
   <li>Make sure you enabled developer mode in chrome extensions, and gave UserScript access to Tampermonkey (right click icon -> "Manage extension")</li>
   <li>Click on the Tampermonkey extensions icon once installed and press "Dashboard"</li>
