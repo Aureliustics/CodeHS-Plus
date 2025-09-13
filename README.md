@@ -2,7 +2,7 @@
 <img src="https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/main/Screenshots/Screenshot_1.png" alt="Main UI and codeblock"/>
 <img src="https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/main/Screenshots/Screenshot_2.png" alt="Notifications"/>
 <img src="https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/46925fc3719fa2008a4722b353e3c14b5de24cb3/Screenshots/Screenshot_3.png" alt="Saved Links">
-<h3>Adds general utility and quality of life to CodeHS. Currently the only features are saving sandbox links to collaborate on CodeHS easier, showing assignment answers in a codeblock or copying to clipboard, some color customization to the cheat menu, displaying the amount of time you spent in a sandbox. The cheat menu is built with stealth in mind. There is a self destruct button (middle click to activate) to destroy cheat menu and codeblock. This makes it harder to get caught by teachers.</h3>
+<h3>Adds general utility and quality of life to CodeHS. Currently the only features are saving sandbox links to collaborate on CodeHS easier, showing assignment answers in a codeblock or copying to clipboard, some color customization to the cheat menu, displaying the amount of time you spent in a sandbox. The cheat menu is built with stealth in mind. There is a self destruct button (middle click to activate) to destroy cheat menu and codeblock. This makes it harder to get caught by teachers. If you like this repository, I would greatly appreciate a star, thank you. </h3>
 <h1>Installation</h1>
 <ul>
   <h3>
@@ -86,7 +86,3 @@ CheatFlagType: {
 ```
 <li>Make sure you aren't just copy pasting the answer into your IDE. Instead manually type out the answer with different variable names, function names, and running the code frequently to have code history. I might implement some anticheat bypasses in the future but for now, stay vigilant when using the cheat.</li>
 <li>If you are trying to get answers to a quiz, the cheat menu will currently not do that for you. If you want CodeHS quiz answers refer to these repositories: <a href="https://github.com/aditeyapatakoti/CodeHS-IntroIntoPython/tree/main" target="_blank">python</a>, <a href="https://github.com/aditeyapatakoti/CodeHS-IntroIntoJavascript" target="_blank">javascript</a>, <a href="https://github.com/terrasky064/codehs-terrasky064-java-answers" target="_blank">java</a></li>
-<h2>If you like this repository/project, make sure to star it!</h2>
-
-## If you like this project, please give it a star! 🌟
-[Star this repo](https://github.com/Aureliustics/CodeHS-Plus)
