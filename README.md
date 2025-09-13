@@ -15,9 +15,9 @@
   <li>The only caveat with this installion method is you have to keep pasting the script into the code, so its better to do method 2.</li>
 </ul>
 <ul>
-  <h2>
+  <h3>
     Method 2: Proper
-  </h2>
+  </h3>
   <li>Install Tampermonkey <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en" target="_blank">here</a></li>
   <li>Make sure you enabled developer mode in chrome extensions, and gave UserScript access to Tampermonkey (right click icon -> "Manage extension")</li>
   <li>Click on the Tampermonkey extensions icon once installed and press "Dashboard"</li>
