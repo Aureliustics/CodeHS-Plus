@@ -1,6 +1,7 @@
 <h1>CodeHS Plus</h1>
 <h3>Adds general utility and quality of life to CodeHS. Currently the only features are saving sandbox links to collaborate on CodeHS easier, showing assignment answers in a codeblock or copying to clipboard, displaying the amount of time you spent in a sandbox. The cheat menu is built with stealth in mind. There is a self destruct button (middle click to activate) to destroy cheat menu and codeblock. This makes it harder to get caught by teachers.</h3>
-
+![image](https://github.com/Aureliustics/CodeHS-Plus/blob/main/Screenshots/Screenshot_1.png?raw=true)
+![image](https://github.com/Aureliustics/CodeHS-Plus/blob/main/Screenshots/Screenshot_2.png?raw=true)
 <h1>Installation</h1>
 <ul>
   <li>To run this script, you need to install Tampermonkey</li>
