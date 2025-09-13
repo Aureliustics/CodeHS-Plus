@@ -57,7 +57,7 @@
 <h1>Known Bugs</h1>
 <ul>
   <li>If either the Cheat menu or saved links UI is not showing up, refresh the page. This usually happens because Tampermonkey doesn't reinject upon subdomain changes.</li>
-  <li>You might notice some buttons and text be affected by the CSS in the cheat menu aka they will have the same color. It's an easy fix but it isn't super severe so I might just leave it for now.</li>
+  <s><li>You might notice some buttons and text be affected by the CSS in the cheat menu aka they will have the same color. It's an easy fix but it isn't super severe so I might just leave it for now.</li></s> Edit: Fixed
 </ul>
 <h1>Disclaimer</h1>
 <b>I am not responsible if you get caught using the cheat option aswell as any damages that may occur during usage. CodeHS has anticheating measures in place, and I cannot promise that the cheat is undetected.</b>
