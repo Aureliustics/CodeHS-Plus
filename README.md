@@ -1,4 +1,6 @@
 <h1>CodeHS Plus</h1>
+<img src="https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/main/Screenshots/Screenshot_1.png" alt="Main UI and codeblock"/>
+<img src="https:/raw.githubusercontent.com/Aureliustics/CodeHS-Plus/main/Screenshots/Screenshot_2.png?" alt="Notifications"/>
 <h3>Adds general utility and quality of life to CodeHS. Currently the only features are saving sandbox links to collaborate on CodeHS easier, showing assignment answers in a codeblock or copying to clipboard, displaying the amount of time you spent in a sandbox. The cheat menu is built with stealth in mind. There is a self destruct button (middle click to activate) to destroy cheat menu and codeblock. This makes it harder to get caught by teachers.</h3>
 <h1>Installation</h1>
 <ul>
@@ -39,6 +41,7 @@
 <h1>Known Bugs</h1>
 <ul>
   <li>If either the Cheat menu or saved links UI is not showing up, refresh the page. This usually happens because Tampermonkey doesn't reinject upon subdomain changes.</li>
+  <li>You might notice some buttons and text be affected by the CSS in the cheat menu aka they will have the same color. It's an easy fix but it isn't super severe so I might just leave it for now.</li>
 </ul>
 <h1>Disclaimer</h1>
 <b>I am not responsible if you get caught using the cheat option aswell as any damages that may occur during usage. CodeHS has anticheating measures in place, and I cannot promise that the cheat is undetected.</b>
@@ -67,5 +70,3 @@ CheatFlagType: {
 ```
 <li>Make sure you aren't just copy pasting the answer into your IDE. Instead manually type out the answer with different variable names, function names, and running the code frequently to have code history. I might implement some anticheat bypasses in the future but for now, stay vigilant when using the cheat.</li>
 <li>If you are trying to get answers to a quiz, the cheat menu will currently not do that for you. If you want CodeHS quiz answers refer to these repositories: <a href="https://github.com/aditeyapatakoti/CodeHS-IntroIntoPython/tree/main" target="_blank">python</a> <a href="https://github.com/aditeyapatakoti/CodeHS-IntroIntoJavascript" target="_blank">javascript</a>.</li>
-
-![Screenshot 1](https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/main/Screenshots/Screenshot_1.png)
