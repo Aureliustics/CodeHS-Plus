@@ -12,7 +12,7 @@
   <li>Go to your CodeHS assignment and right click, click inspect then navigate to the "Console" at the top of inspect element</li>
   <li>Type "allow pasting" into the console then press enter</li>
   <li>Control + V to paste the cheat menu script then enter and you should have the cheat</li>
-  <li>The only caveat with this installion method is you have to keep pasting the script into the code, so its better to do method 2.</li>
+  <li>The only caveat with this installion method is you have to keep pasting the script into the console for every assignment or refresh, so its better to do method 2.</li>
 </ul>
 <ul>
   <h3>
