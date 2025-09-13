@@ -49,7 +49,7 @@
   <li>Navigate to https://codehs.com/sandbox</li>
   <li>Create, rename, delete, or copy link for sandboxes you save.</li>
   <li>When doing an assignment, you should see a new button next to the CodeHS logo on the top left.</li>
-  <li>It is called "Cheat Menu". Clicking on it will show you the features.</li>
+  <li>It is called "Cheat Menu". Clicking on it will toggle the menu</li>
   <li>When are you in a sandbox, it will display the amount of time you have spent inside of it in real time. This does save and sync across tabs.</li>
 </ul>
 <h1>Known Bugs</h1>
