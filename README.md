@@ -42,7 +42,7 @@
 // @require      https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/main.js
 // ==/UserScript==
 ```
-  <li>If you <b>don't</b> want updates to come with your install, simiply paste this <a href="https://github.com/Aureliustics/CodeHS-Plus/blob/main/main.js" target="_blank">script</a> into tampermonkey instead.</li>
+  <li>If you <b>don't</b> want updates to come with your install, simply paste this <a href="https://github.com/Aureliustics/CodeHS-Plus/blob/main/main.js" target="_blank">script</a> into tampermonkey instead.</li>
   <li>Go to <a href="https://codehs.com/" target="_blank">CodeHS</a> and make sure the script is running. You should see a red (1) icon on the Tampermonkey icon.</li>
 </ul>
 
