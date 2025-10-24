@@ -10,6 +10,7 @@
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_xmlhttpRequest
+// @resource     CheatMenu data:application/json,{"stealth":false}
 // ==/UserScript==
 
 (function () {
@@ -30,19 +31,35 @@
     }
 
     if (window.location.href.match(/https:\/\/codehs\.com\/student\/.*\/section\/.*\/assignment\/.*/)) { // regex for checking if you are doing an assignment
+
+        // read if cheat menu is on stealth mode or not
+        let cheatMenu = {};
+        try {
+            cheatMenu = JSON.parse(GM_getResourceText("CheatMenu"));
+        } catch (e) {
+            console.warn("Couldn't determine if stealth is enabled, defaulting to false:", e);
+            cheatMenu = { stealth: false };
+        }
+
+        // you can change the stealth toggle by modifying the boolean in @resource of the tampermonkey header // @resource CheatMenu data:application/json,{"stealth":false} <- set to true or false
+        const scriptUrl = cheatMenu.stealth
+            ? "https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/Cheat%20Menu%20Lite.js" // stripped down cheat menu
+            : "https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/Cheat%20Menu.js"; // full cheat menu
+
         GM_xmlhttpRequest({
             method: "GET",
-            url: "https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/Cheat%20Menu.js", // the code for dumping the codehs assignment answer
-            onload: function(response) {
-                const script = document.createElement('script');
+            url: scriptUrl,
+            onload: function (response) {
+                const script = document.createElement("script");
                 script.textContent = response.responseText;
                 document.body.appendChild(script);
             },
-            onerror: function(err) {
+            onerror: function (err) {
                 console.error("Failed to load external script:", err);
             }
         });
-    } else if (window.location.href.match(/^https:\/\/codehs\.com\/sandbox\/id\/.*$/)) { // regex to check if you are in a sandbox
+    }
+    else if (window.location.href.match(/^https:\/\/codehs\.com\/sandbox\/id\/.*$/)) { // regex to check if you are in a sandbox
         let timeSpent = GM_getValue('timeSpent', 0);
 
         // concat time

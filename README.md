@@ -30,7 +30,7 @@
 // ==UserScript==
 // @name         CodeHS+
 // @namespace    http://tampermonkey.net/
-// @version      2.0
+// @version      2.5
 // @description  Adds general utility and quality of life to CodeHS.
 // @author       Aureliustics
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=codehs.com
@@ -40,6 +40,7 @@
 // @grant        GM_getValue
 // @grant        GM_xmlhttpRequest
 // @require      https://raw.githubusercontent.com/Aureliustics/CodeHS-Plus/refs/heads/main/main.js
+// @resource     CheatMenu data:application/json,{"stealth":false}
 // ==/UserScript==
 ```
   <li>If you <b>don't</b> want updates to come with your install, simply paste this <a href="https://github.com/Aureliustics/CodeHS-Plus/blob/main/main.js" target="_blank">script</a> into tampermonkey instead.</li>
