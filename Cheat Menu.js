@@ -737,7 +737,7 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
               window.hljs.highlightElement(code);
               rainNotify("[CodeHS+]: Answer dumped to codeblock. Don't copy and paste, read it and type it in your IDE.");
           })();
-        } else if (choice == '3') { // destroy codeblocks
+        } else if (choice == 3) { // destroy codeblocks
             const codeblocks = document.querySelectorAll('pre > code');
             let removedAny = false; // prevent no codeblocks found notif from running a ton of times since its in a foreach loop
         
