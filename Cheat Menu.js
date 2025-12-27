@@ -688,25 +688,22 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
               if (decrypted.length < 1) {
                 codeString += "No solution was resolved.\nAre trying to run this on an example\nand not an assignment?";
               }
-              let detectedLang = 'plaintext';
-          
+
+              let detectedLang = 'plaintext'; // default to plaintext if lang not detected
+
               // regex to detect common keywords for diff languages
-              if (/^\s*#include\b|int main\s*\(/.test(codeString)) {
-                detectedLang = 'cpp';
-              } else if (/^\s*import\b.*\bfrom\b|def |print\(/.test(codeString)) {
-                  detectedLang = 'python';
-              } else if (/function\s|\bconst\b|\blet\b|\bvar\b/.test(codeString)) {
-                  detectedLang = 'javascript';
-              } else if (/public\s+class\s+\w+|System\.out\.println\(/.test(codeString)) {
-                  detectedLang = 'java';
-              } else if (/<!DOCTYPE html>|<html>|<div>|<head>|<body>/.test(codeString)) {
-                  detectedLang = 'html';
-              } else if (/{\s*[^}]*:\s*[^}]*}/.test(codeString) && /color|background|font|margin|padding/.test(codeString)) {
-                  detectedLang = 'css';
-              } else if (/SELECT\s.+\sFROM\s|INSERT\sINTO\s|UPDATE\s.+\sSET\s|DELETE\sFROM\s/i.test(codeString)) {
-                  detectedLang = 'sql';
-              }
-          
+              const detectors = [
+                ['cpp',        s => /^\s*#include\b|int main\s*\(/.test(s)],
+                ['python',     s => /^\s*import\b.*\bfrom\b|def |print\(/.test(s)],
+                ['javascript', s => /function\s|\bconst\b|\blet\b|\bvar\b/.test(s)],
+                ['java',       s => /public\s+class\s+\w+|System\.out\.println\(/.test(s)],
+                ['html',       s => /<!DOCTYPE html>|<html>|<div>|<head>|<body>/.test(s)],
+                ['css',        s => /{\s*[^}]*:\s*[^}]*}/.test(s) && /color|background|font|margin|padding/.test(s)],
+                ['sql',        s => /SELECT\s.+\sFROM\s|INSERT\sINTO\s|UPDATE\s.+\sSET\s|DELETE\sFROM\s/i.test(s)]
+              ];
+
+              detectedLang = detectors.find(([, test]) => test(codeString))?.[0] ?? detectedLang; // iterate through lang array until true else plaintext
+
               // creating the codeblock
               const pre = document.createElement('pre');
               pre.className = 'hljs';
