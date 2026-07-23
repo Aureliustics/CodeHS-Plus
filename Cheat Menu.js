@@ -681,7 +681,7 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
           }
           else if (choice == 1){
             (async () => {
-              const targetDiv = document.querySelector('#panels > div.t > div:nth-child(4) > div');
+              const targetDiv = document.querySelector('._fileListContainer_8tfhz_1754');
               
               decrypted = decrypted.replace(/\\n/g, '\n').replace(/\\"/g, '"');
               var codeString = `The following code was generated using CodeHS+\n\n${decrypted}`;

@@ -208,7 +208,7 @@
                         }
 
                         else if (action === "delete") {
-                            savedLinks.splice(index, 1); // Remove the link
+                            savedLinks.splice(index, 1); // remove the link
                             await GM_setValue("savedLinks", savedLinks);
                             renderLinks();
                         }

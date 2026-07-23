@@ -57,9 +57,9 @@
 </ul>
 <h1>Known Bugs</h1>
 <ul>
-  <li>Looks like codeblocks aren't being created. Probably because CodeHS changed something in their UI(?) since copy to clipboard still works. I will fix asap just very busy right now.</li>
   <li>If either the Cheat menu or saved links UI is not showing up, refresh the page. This usually happens because Tampermonkey doesn't reinject upon subdomain changes.</li>
   <s><li>You might notice some buttons and text be affected by the CSS in the cheat menu aka they will have the same color. It's an easy fix but it isn't super severe so I might just leave it for now.</li></s> Edit: Fixed
+    <s><li>Looks like codeblocks aren't being created. Probably because CodeHS changed something in their UI(?) since copy to clipboard still works. I will fix asap just very busy right now.</li></s> Edit: Fixed, it was because CodeHS made a minor change in UI.
 </ul>
 <h1>Disclaimer</h1>
 <b>I am not responsible if you get caught using the cheat option aswell as any damages that may occur during usage. CodeHS has anticheating measures in place, and I cannot promise that the cheat is undetected.</b>
