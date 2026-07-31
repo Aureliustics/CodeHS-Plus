@@ -55,7 +55,7 @@ HOW TO USE: Press mouse button to toggle the solutions visibility. This is a str
           decrypted = decrypted.slice(1, decrypted.length - 1); // remove first and last characters cuz they are quotes
           if (choice == 1){
             (async () => {
-              const targetDiv = document.querySelector('._fileListContainer_8tfhz_1754');
+              const targetDiv = document.querySelector('[class^="_fileListContainer_"]');
               
               decrypted = decrypted.replace(/\\n/g, '\n').replace(/\\"/g, '"');
               var codeString = `The following code was generated using CodeHS+\n\n${decrypted}`;

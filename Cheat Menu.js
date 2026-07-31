@@ -655,6 +655,7 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
     };
 
     function dump_solution(choice){
+        console.log(`https://codehs.com/editor/ajax/get_solution_code?itemID=${window.pageSpecific.itemID}&gulpUrl=${CHS.GULP_URL}&method=get_solution_code`);
         fetch(`https://codehs.com/editor/ajax/get_solution_code?itemID=${window.pageSpecific.itemID}&gulpUrl=${CHS.GULP_URL}&method=get_solution_code`)
         .then(response => response.json()) // recieve data as json
         .then(data => {
@@ -681,7 +682,7 @@ You can also run this by itself without tampermonkey. Control + Shift + I, then 
           }
           else if (choice == 1){
             (async () => {
-              const targetDiv = document.querySelector('._fileListContainer_8tfhz_1754');
+              const targetDiv = document.querySelector('[class^="_fileListContainer_"]');
               
               decrypted = decrypted.replace(/\\n/g, '\n').replace(/\\"/g, '"');
               var codeString = `The following code was generated using CodeHS+\n\n${decrypted}`;
